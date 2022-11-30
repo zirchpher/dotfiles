@@ -9,20 +9,6 @@ This is my basic configuration of my **Alacritty terminal**.
 Since the file can grow, or also that I like to test things,
 I want to have a backup version which if it works correctly
 
-## 🐙 Usage
-
-To clone the file inside an already created folder you can execute the following command
-
-```bash
-git clone -b main https://github.com/mrLuisFer/alacritty_config.git .
-```
-
-You can read a little more about **Alacritty** in the **[official repository](https://github.com/alacritty/alacritty)**
-
-## ⚙ Config
-
-Alacritty doesn't create the config file for you, but it looks for one in the following locations:
-
 ```bash
 $XDG_CONFIG_HOME/alacritty/alacritty.yml
 
