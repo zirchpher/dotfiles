@@ -29,8 +29,10 @@ mason_lspconfig.setup({
 		"cssls",
 		"cssmodules_ls",
 		"tailwindcss",
-		-- JS & TS
+		"emmet_ls",
+		-- Prog Lang
 		"sumneko_lua",
+		"pyright",
 		"quick_lint_js",
 		"tsserver",
 		-- TEXT

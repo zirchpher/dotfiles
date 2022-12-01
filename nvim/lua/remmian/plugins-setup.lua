@@ -63,6 +63,7 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
+	use("nvim-lua/completion-nvim") -- autocompletion in suggest mode
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
@@ -99,8 +100,14 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-	-- easymotion
-	use("easymotion/vim-easymotion")
+	-- IDE
+	use("easymotion/vim-easymotion") -- easymotion
+	use("gko/vim-coloresque") -- color name highlighter
+	use("pangloss/vim-javascript") -- syntax color in JS
+	use("frazrepo/vim-rainbow") -- color brackets
+	use("maxmellon/vim-jsx-pretty") -- html color syntax in react
+
+	-- JS Snippets
 
 	if packer_bootstrap then
 		require("packer").sync()

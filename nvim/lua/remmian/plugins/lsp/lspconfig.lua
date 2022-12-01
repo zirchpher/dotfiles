@@ -61,6 +61,12 @@ lspconfig["html"].setup({
 	on_attach = on_attach,
 })
 
+-- configure emmetls
+lspconfig["emmet_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- configure css modules server
 lspconfig["cssmodules_ls"].setup({
 	capabilities = capabilities,
@@ -73,18 +79,16 @@ lspconfig["quick_lint_js"].setup({
 	on_attach = on_attach,
 })
 
--- configure quick_lint_js server
-lspconfig["marksman"].setup({
+-- configure intelephense server
+lspconfig["intelephense"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
--- configure typescript server with plugin
-typescript.setup({
-	server = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
+-- configure markdown server
+lspconfig["marksman"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 -- configure css server
@@ -95,6 +99,12 @@ lspconfig["cssls"].setup({
 
 -- configure tailwindcss server
 lspconfig["tailwindcss"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure tsserver
+lspconfig["tsserver"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
@@ -119,3 +129,27 @@ lspconfig["sumneko_lua"].setup({
 		},
 	},
 })
+
+lspconfig["pyright"].setup({
+	settings = {
+		python = {
+			analysis = {
+				autoSearchPaths = true,
+				diagnosticMode = "workspace",
+				useLibraryCodeForTypes = true,
+			},
+		},
+	},
+})
+
+-- Angular config TODO
+-- local project_library_path = "/path/to/project/lib"
+-- local cmd =
+-- 	{ "ngserver", "--stdio", "--tsProbeLocations", project_library_path, "--ngProbeLocations", project_library_path }
+--
+-- require("lspconfig").angularls.setup({
+-- 	cmd = cmd,
+-- 	on_new_config = function(new_config, new_root_dir)
+-- 		new_config.cmd = cmd
+-- 	end,
+-- })
