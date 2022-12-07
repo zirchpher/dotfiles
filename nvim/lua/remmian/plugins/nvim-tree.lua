@@ -11,6 +11,9 @@ vim.g.loaded_netrwPlugin = 1
 -- change color for arrows in tree to light blue
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
+-- FixIDentLine
+vim.cmd("let g:indentLine_fileTypeExclude = ['nerdtree']")
+
 -- configure nvim-tree
 nvimtree.setup({
 	-- change folder arrow icons

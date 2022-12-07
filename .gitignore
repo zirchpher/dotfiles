@@ -202,3 +202,5 @@ yay/
 Code/
 gedit/
 *.list
+autostart/
+alacritty/*.bak

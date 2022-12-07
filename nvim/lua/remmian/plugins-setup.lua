@@ -106,8 +106,7 @@ return packer.startup(function(use)
 	use("pangloss/vim-javascript") -- syntax color in JS
 	use("frazrepo/vim-rainbow") -- color brackets
 	use("maxmellon/vim-jsx-pretty") -- html color syntax in react
-
-	-- JS Snippets
+	use("Yggdroot/indentLine") -- html color syntax in react
 
 	if packer_bootstrap then
 		require("packer").sync()
