@@ -334,7 +334,7 @@ screens = [
                     fontsize = FONT_SIZE,
                     play_color = FG_COLOR_LIGHT,
                     noplay_color = TEXT_COLOR1,
-                    # max_chars = 0,
+                    max_chars = 40,
                 ),
                 addSeparator(15),
                 # Group MUSIC END

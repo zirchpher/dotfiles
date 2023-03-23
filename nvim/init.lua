@@ -1,23 +1,34 @@
--- plugins-setup
-require("remmian.plugins-setup")
+vim.defer_fn(function()
+  pcall(require, "impatient")
+end, 0)
 
--- General settings
-require("remmian.core.options")
-require("remmian.core.keymaps")
-require("remmian.core.colorscheme")
+require "core"
+require "core.options"
 
--- pluglins settings
-require("remmian.plugins.comment")
-require("remmian.plugins.nvim-tree")
-require("remmian.plugins.lualine")
-require("remmian.plugins.telescope")
-require("remmian.plugins.nvim-cmp")
-require("remmian.plugins.lsp.mason")
-require("remmian.plugins.lsp.lspsaga")
-require("remmian.plugins.lsp.lspconfig")
-require("remmian.plugins.lsp.null-ls")
-require("remmian.plugins.autopairs")
-require("remmian.plugins.treesitter")
-require("remmian.plugins.gitsigns")
-require("remmian.plugins.easymotion")
-require("remmian.plugins.others")
+-- setup packer + plugins
+local fn = vim.fn
+local install_path = fn.stdpath "data" .. "/site/pack/packer/opt/packer.nvim"
+
+if fn.empty(fn.glob(install_path)) > 0 then
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1e222a" })
+  print "Cloning packer .."
+  fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
+
+  -- install plugins + compile their configs
+  vim.cmd "packadd packer.nvim"
+  require "plugins"
+  vim.cmd "PackerSync"
+
+  -- install binaries from mason.nvim & tsparsers
+  vim.api.nvim_create_autocmd("User", {
+    pattern = "PackerComplete",
+    callback = function()
+      vim.cmd "bw | silent! MasonInstallAll" -- close packer window
+      require("packer").loader "nvim-treesitter"
+    end,
+  })
+end
+
+pcall(require, "custom")
+
+require("core.utils").load_mappings()
