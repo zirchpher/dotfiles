@@ -32,7 +32,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Toggle between different layouts as defined below
     ([mod], "Tab", lazy.next_layout()),
-    ([mod, "shift"], "Tab", lazy.prev_layout()),
+    #([mod], "Tab", lazy.next_layout()),
+    #([mod, "shift"], "Tab", lazy.prev_layout()),
     
     # Kill window
     ([mod], "q", lazy.window.kill()),
@@ -59,10 +60,14 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "space", lazy.spawn("rofi -show drun")),
+    #([mod], "space", lazy.spawn("~/.config/rofi/launchers/type-7/launcher.sh")),
+
+    # Emoji
+    ([mod], "period", lazy.spawn("rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c")),
 
     # Window Nav
-    # ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    #([mod], "Tab", lazy.spawn("rofi -show window")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),

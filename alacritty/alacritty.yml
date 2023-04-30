@@ -82,7 +82,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "MesloLGS NF" 
+    family: "MesloLGS NF"
 
   # The `style` can be specified to pick a specific face.
   style: Regular
@@ -379,32 +379,33 @@ mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: true
 colors:
-  # Default colors
+  name: VisiBlue
+  author: ""
   primary:
-    background: '#000000'
-    foreground: '#ffffff'
-  # Normal colors
+    background: "#000000"
+    foreground: "#666699"
+  cursor:
+    text: "#000000"
+    cursor: "#666699"
   normal:
-    black: '#000000'
-    red: '#cd0000'
-    green: '#00cd00'
-    yellow: '#cdcd00'
-    blue: '#0000ee'
-    magenta: '#cd00cd'
-    cyan: '#00cdcd'
-    white: '#e5e5e5'
-
-  # Bright colors
+    black: "#333366"
+    red: "#6666cc"
+    green: "#0099cc"
+    yellow: "#3366cc"
+    blue: "#006699"
+    magenta: "#0066ff"
+    cyan: "#669999"
+    white: "#99cccc"
   bright:
-    black: '#7f7f7f'
-    red: '#ff0000'
-    green: '#00ff00'
-    yellow: '#ffff00'
-    blue: '#5c5cff'
-    magenta: '#ff00ff'
-    cyan: '#00ffff'
-    white: '#ffffff'
-theme: XTerm
+    black: "#333399"
+    red: "#9999ff"
+    green: "#00ccff"
+    yellow: "#6699ff"
+    blue: "#0099cc"
+    magenta: "#0099ff"
+    cyan: "#66cccc"
+    white: "#ccffff"
+theme: Visiblue
 
 # Regex hints
 #

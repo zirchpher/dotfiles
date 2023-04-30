@@ -1,14 +1,21 @@
 # My Qtile Setup
 
-![Qtile](./screenshots/qtile.png)
+![Qtile](./screenshots/desktop.png)
 
 # Índice
 
+-   [Instalación](#instalación)
 -   [Atajos de teclado](#atajos-de-teclado)
 -   [Paquetes Necesarios](#paquetes-necesarios)
 -   [Fuentes](#fuentes)
 -   [Iconos y Temas](#iconos-y-temas)
 -   [Agradecimientos](#agradecimientos)
+
+# Instalación
+
+```BASH
+sudo pacman -S cmus playerctl psutils python-psutil haskell-iwlib python-iwlib scrot gnome-screenshot xfce4-screenshooter xorg-xbacklight gnome-keyring kcolorchooser
+```
 
 # Atajos de teclado
 
@@ -49,7 +56,7 @@ mod = Tecla Windows
 | Nombre            | Descarga                                 |
 | ----------------- | ---------------------------------------- |
 | **Windows Fonts** | bit.ly/winfonts                          |
-| **nerfonts**      | yay -S nerd-fonts-complete               |
+| **nerfonts**      | yay -S nerd-fonts-complete-mono-glyphs   |
 | **MesloLGS NF**   | yay -S ttf-meslo-nerd-font-powerlevel10k |
 
 1. Instalación de Windows Fonts
