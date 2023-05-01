@@ -12,3 +12,6 @@ cbatticon -u 10 &
 # Load Wallpaper
 nitrogen --restore &
 xbacklight -set 2 &
+
+# Apps
+redshift &

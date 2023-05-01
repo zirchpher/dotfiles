@@ -4,18 +4,11 @@
 
 # Índice
 
--   [Instalación](#instalación)
 -   [Atajos de teclado](#atajos-de-teclado)
 -   [Paquetes Necesarios](#paquetes-necesarios)
 -   [Fuentes](#fuentes)
 -   [Iconos y Temas](#iconos-y-temas)
 -   [Agradecimientos](#agradecimientos)
-
-# Instalación
-
-```BASH
-sudo pacman -S cmus playerctl psutils python-psutil haskell-iwlib python-iwlib scrot gnome-screenshot xfce4-screenshooter xorg-xbacklight gnome-keyring kcolorchooser
-```
 
 # Atajos de teclado
 
@@ -40,6 +33,7 @@ mod = Tecla Windows
 | Nombre de paquete       | Descripción                                  |
 | ----------------------- | -------------------------------------------- |
 | **cmus**                | Reproductor de música CLI                    |
+| **redshift**            | Ajusta la temperatura de tu pantalla         |
 | **playerctl**           | Permite controlar la música desde el teclado |
 | **psutil**              | Tools Necesario para Qtile                   |
 | **iwlib**               | Visibilidad de Wifi en Qtile                 |
@@ -50,6 +44,35 @@ mod = Tecla Windows
 | **gnome-keyring**       | Permite guardar contraseñas útil para VSC    |
 | **kcolorchooser**       | Color Picker para Linux                      |
 | **Ulauncher**           | Lanzador de Aplicaciones (opcional)          |
+
+1. Instala los paquetes
+
+```BASH
+sudo pacman -S cmus redshift playerctl psutils python-psutil haskell-iwlib python-iwlib scrot gnome-screenshot xfce4-screenshooter xorg-xbacklight gnome-keyring kcolorchooser
+```
+
+2. Configura redshift
+
+```BASH
+# Crea un archivo con el nombre redshift.conf
+nano .config/redshift/redshift.conf
+
+# Busca las coordenadas de tu ciudad en:
+# https://www.geonames.org/
+
+# Pega la configuración y edita tus coordenada
+[redshift]
+temp-day=6800
+temp-night=4500
+transition=0
+gamma=0.8
+location-provider=manual
+[manual]
+lat=-00.00000
+lon=-00.00000
+[randr]
+screen=0
+```
 
 # Fuentes
 
