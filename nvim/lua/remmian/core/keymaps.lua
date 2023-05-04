@@ -10,6 +10,9 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
+-- update nvim
+keymap.set("n", "<F5>", ":source%<CR>")
+
 -- save
 keymap.set("n", "<C-s>", ":w<CR>")
 

@@ -6,7 +6,6 @@ end
 
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
-vim.opt.listchars:append("eol:↴")
 
 -- configure/enable indent_blankline
 indent_blankline.setup({

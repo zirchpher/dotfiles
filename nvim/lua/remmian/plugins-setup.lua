@@ -66,7 +66,14 @@ return packer.startup(function(use)
     -- as vs-code
     use("nvim-tree/nvim-web-devicons")
     use("onsails/lspkind-nvim") -- vscode-like pictograms
-    use("lukas-reineke/indent-blankline.nvim")
+    use("lukas-reineke/indent-blankline.nvim") -- indentation in the code
+    use({
+        "akinsho/toggleterm.nvim",
+        tag = "*",
+        config = function()
+            require("toggleterm").setup()
+        end,
+    }) -- terminal integration
 
     -- statusline
     use("nvim-lualine/lualine.nvim")
