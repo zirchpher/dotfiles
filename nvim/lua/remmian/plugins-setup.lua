@@ -44,8 +44,7 @@ return packer.startup(function(use)
     -- essential plugins
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
     use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
-    use("NvChad/nvim-colorizer.lua") -- CSS colors preview
-    use("ziontee113/color-picker.nvim") -- CSS colors picker
+    use("NvChad/nvim-colorizer.lua") -- css colors preview
 
     -- commenting with gc
     use("numToStr/Comment.nvim")
