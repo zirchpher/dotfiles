@@ -33,15 +33,19 @@ return packer.startup(function(use)
 
     use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-    use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-
     use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
     use("szw/vim-maximizer") -- maximizes and restores current window
 
+    -- colorscheme
+    use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+    use("ayu-theme/ayu-vim")
+
     -- essential plugins
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
     use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
+    use("NvChad/nvim-colorizer.lua") -- CSS colors preview
+    use("ziontee113/color-picker.nvim") -- CSS colors picker
 
     -- commenting with gc
     use("numToStr/Comment.nvim")
@@ -49,8 +53,9 @@ return packer.startup(function(use)
     -- file explorer
     use("nvim-tree/nvim-tree.lua")
 
-    -- vs-code like icons
+    -- as vs-code
     use("nvim-tree/nvim-web-devicons")
+    use("onsails/lspkind-nvim") -- vscode-like pictograms
 
     -- statusline
     use("nvim-lualine/lualine.nvim")
