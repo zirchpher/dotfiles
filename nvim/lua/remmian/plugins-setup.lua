@@ -39,7 +39,7 @@ return packer.startup(function(use)
 
     -- colorscheme
     use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-    use("ayu-theme/ayu-vim")
+    -- use("ayu-theme/ayu-vim")
 
     -- essential plugins
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
@@ -53,9 +53,20 @@ return packer.startup(function(use)
     -- file explorer
     use("nvim-tree/nvim-tree.lua")
 
+    -- Easymotion
+    use({
+        "phaazon/hop.nvim",
+        branch = "v2", -- optional but strongly recommended
+        config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+            require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+        end,
+    })
+
     -- as vs-code
     use("nvim-tree/nvim-web-devicons")
     use("onsails/lspkind-nvim") -- vscode-like pictograms
+    use("lukas-reineke/indent-blankline.nvim")
 
     -- statusline
     use("nvim-lualine/lualine.nvim")
