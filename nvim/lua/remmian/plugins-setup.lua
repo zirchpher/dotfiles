@@ -45,6 +45,14 @@ return packer.startup(function(use)
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
     use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
     use("NvChad/nvim-colorizer.lua") -- css colors preview
+    use("dense-analysis/ale") -- syntax checking and semantic errors in the same line
+    use({
+        "romgrk/barbar.nvim",
+        requires = {
+            "lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+            "nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+        },
+    }) -- tabline plugin
 
     -- commenting with gc
     use("numToStr/Comment.nvim")
