@@ -37,9 +37,8 @@ return packer.startup(function(use)
 
     use("szw/vim-maximizer") -- maximizes and restores current window
 
-    -- colorscheme
+    -- themes
     use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-    -- use("ayu-theme/ayu-vim")
 
     -- essential plugins
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
