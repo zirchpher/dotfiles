@@ -4,11 +4,11 @@
 
 # Índice
 
--   [Atajos de teclado](#atajos-de-teclado)
--   [Paquetes Necesarios](#paquetes-necesarios)
--   [Fuentes](#fuentes)
--   [Iconos y Temas](#iconos-y-temas)
--   [Agradecimientos](#agradecimientos)
+- [Atajos de teclado](#atajos-de-teclado)
+- [Paquetes Necesarios](#paquetes-necesarios)
+- [Fuentes](#fuentes)
+- [Iconos y Temas](#iconos-y-temas)
+- [Agradecimientos](#agradecimientos)
 
 # Atajos de teclado
 
@@ -72,6 +72,9 @@ lat=-00.00000
 lon=-00.00000
 [randr]
 screen=0
+
+(opcional) Habilita el autoarranque al iniciar tu S.O.
+systemctl --user enable redshift-gtk.service
 ```
 
 # Fuentes
@@ -91,14 +94,14 @@ sudo cp -r WindowsFonts /usr/share/fonts
 
 # Iconos y Temas
 
-| Nombre | Tipo | Descarga |
-| --- | --- | --- |
-| **Sweet-Dark-v40** | Theme | bit.ly/Sweet-Dark-v40 |
+| Nombre                            | Tipo  | Descarga                             |
+| --------------------------------- | ----- | ------------------------------------ |
+| **Sweet-Dark-v40**                | Theme | bit.ly/Sweet-Dark-v40                |
 | **Material-Black-Blueberry-Suru** | Icons | bit.ly/Material-Black-Blueberry-Suru |
 
--   Links en Gnome Look
-    -   Sweet-Dark-v40: https://www.gnome-look.org/p/1253385/
-    -   Material-Black-Blueberry-Suru: https://www.gnome-look.org/p/1333360/
+- Links en Gnome Look
+  - Sweet-Dark-v40: https://www.gnome-look.org/p/1253385/
+  - Material-Black-Blueberry-Suru: https://www.gnome-look.org/p/1333360/
 
 1. Instalación de Temas
 

@@ -379,33 +379,33 @@ mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: true
 colors:
-  # Default colors
+  name: Erebus
+  author: ""
   primary:
-    background: '#0c0c0c'
-    foreground: '#cccccc'
-
-  # Normal colors
+    background: "#000000"
+    foreground: "#ffffff"
+  cursor:
+    text: "#000000"
+    cursor: "#ffffff"
   normal:
-    black: '#0c0c0c'
-    red: '#c50f1f'
-    green: '#13a10e'
-    yellow: '#c19c00'
-    blue: '#0037da'
-    magenta: '#881798'
-    cyan: '#3a96dd'
-    white: '#cccccc'
-
-  # Bright colors
+    black: "#757575"
+    red: "#ff5f5f"
+    green: "#de8a36"
+    yellow: "#d78787"
+    blue: "#af5fd7"
+    magenta: "#ff87d7"
+    cyan: "#dea3e5"
+    white: "#b8b8b8"
   bright:
-    black: '#767676'
-    red: '#e74856'
-    green: '#16c60c'
-    yellow: '#f9f1a5'
-    blue: '#3b78ff'
-    magenta: '#b4009e'
-    cyan: '#61d6d6'
-    white: '#f2f2f2'
-theme: Campbell
+    black: "#b8b8b8"
+    red: "#d78787"
+    green: "#ff9f6f"
+    yellow: "#ff5f5f"
+    blue: "#dea3e5"
+    magenta: "#d7afaf"
+    cyan: "#af5fd7"
+    white: "#757575"
+theme: Erebus
 
 # Regex hints
 #
