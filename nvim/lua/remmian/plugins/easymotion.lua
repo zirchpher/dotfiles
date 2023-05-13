@@ -5,5 +5,5 @@ if not setup then
 end
 
 vim.keymap.set("", "f", function()
-    hop.hint_char2({ direction = { nil }, current_line_only = false })
+    hop.hint_char1({ direction = { nil }, current_line_only = false })
 end, { remap = true })

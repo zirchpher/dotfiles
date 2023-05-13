@@ -37,6 +37,8 @@ return packer.startup(function(use)
 
     use("szw/vim-maximizer") -- maximizes and restores current window
 
+    use("sheerun/vim-polyglot") -- highlight colors in many languages
+
     -- themes
     use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 
@@ -73,6 +75,7 @@ return packer.startup(function(use)
     use("nvim-tree/nvim-web-devicons")
     use("onsails/lspkind-nvim") -- vscode-like pictograms
     use("lukas-reineke/indent-blankline.nvim") -- indentation in the code
+    -- install without yarn or npm
     use({
         "akinsho/toggleterm.nvim",
         tag = "*",
@@ -80,6 +83,16 @@ return packer.startup(function(use)
             require("toggleterm").setup()
         end,
     }) -- terminal integration
+
+    -- markdown
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
+    })
 
     -- statusline
     use("nvim-lualine/lualine.nvim")

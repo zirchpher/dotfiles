@@ -236,3 +236,12 @@ paru/
 ranger/
 systemd/
 zsh/
+MongoDB Compass/
+configstore/
+kconf_updaterc
+kdeglobals
+klanguageoverridesrc
+okularpartrc
+okularrc
+partitionmanagerrc
+screenkey.json
