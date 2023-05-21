@@ -38,11 +38,13 @@ super + f
 super + e
 	thunar
 
-shift + alt + {g,p,r,n,m}
+shift + alt + {g,p,r,n,e,k,m}
 	{geany, \
 	 pavucontrol, \
 	 OpenApps --ranger, \
 	 OpenApps --nvim, \
+	 rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c, \
+	 kcolorchooser, \
 	 OpenApps --music}
 
 # Hide/Show Bar (Polybar and/or eww)
@@ -192,14 +194,6 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 alt + shift {Left,Down,Up,Right}
 	bspc node -v {-10 0,0 10,0 -10,10 0}
-
-# Emoji
-super + e
-	rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c
-
-# Color Picker
-super + p
-	kcolorchooser
 
 # Manage brightness
 F7
