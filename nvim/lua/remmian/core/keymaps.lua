@@ -82,16 +82,11 @@ keymap.set("n", "<S-tab>", ":MarkdownPreviewToggle<CR>")
 -- barbar.nvim
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-
 -- Move to previous/next
 map("n", "<M-.>", "<Cmd>BufferPrevious<CR>", opts)
 map("n", "<M-->", "<Cmd>BufferNext<CR>", opts)
-
--- Re-order to previous/next
-map("n", "<M-s-f>", "<Cmd>BufferOrderByDirectory<CR>", opts)
-
+map("n", "<M-s-f>", "<Cmd>BufferOrderByDirectory<CR>", opts) -- Re-order tabs
 -- Goto buffer in position...
--- >"
 map("n", "<M-1>", "<Cmd>BufferGoto 1<CR>", opts)
 map("n", "<M-2>", "<Cmd>BufferGoto 2<CR>", opts)
 map("n", "<M-3>", "<Cmd>BufferGoto 3<CR>", opts)
@@ -102,18 +97,13 @@ map("n", "<M-7>", "<Cmd>BufferGoto 7<CR>", opts)
 map("n", "<M-8>", "<Cmd>BufferGoto 8<CR>", opts)
 map("n", "<M-9>", "<Cmd>BufferGoto 9<CR>", opts)
 map("n", "<M-0>", "<Cmd>BufferGoto 0<CR>", opts)
+map("n", "<M-e>", "<Cmd>BufferPin<CR>", opts) -- Pin/unpin buffer
+map("n", "<M-w>", "<Cmd>BufferClose<CR>", opts) -- Close buffer
+map("n", "<M-q>", "<Cmd>BufferCloseAllButCurrent<CR>", opts) -- close all buffer
 
--- Pin/unpin buffer
-map("n", "<M-e>", "<Cmd>BufferPin<CR>", opts)
-
--- Close buffer
-map("n", "<M-w>", "<Cmd>BufferClose<CR>", opts)
-
--- close all buffer
-map("n", "<M-q>", "<Cmd>BufferCloseAllButCurrent<CR>", opts)
-
--- Magic buffer-picking mode
-map("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
+-- nvim-ufo folding
+keymap.set("n", "zO", require("ufo").openAllFolds)
+keymap.set("n", "zC", require("ufo").closeAllFolds)
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary

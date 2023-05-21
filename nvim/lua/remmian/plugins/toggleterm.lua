@@ -6,7 +6,7 @@ end
 
 -- configure/enable toggleterm
 toggleterm.setup({
-    size = 9,
+    size = 60,
     open_mapping = [[<C-t>]],
     shade_filetypes = {},
     shade_terminals = true,
@@ -16,9 +16,9 @@ toggleterm.setup({
     persist_mode = true, -- if set to true (default) the previous terminal mode will be remembered
     persist_size = true,
     float_opts = {
-        width = 70,
-        height = 15,
-        winblend = 3,
+        width = 90,
+        height = 18,
+        winblend = 5,
         zindex = 1,
     },
     winbar = {

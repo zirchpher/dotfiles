@@ -228,7 +228,7 @@ enchant/
 menus/
 qimgv/
 kitty/
-bspwm/
+# bspwm/
 geany/
 mpd/
 ncmpcpp/
@@ -245,3 +245,6 @@ okularpartrc
 okularrc
 partitionmanagerrc
 screenkey.json
+Deezloader Remix/
+JetBrains/
+obs-studio/

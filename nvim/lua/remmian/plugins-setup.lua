@@ -72,7 +72,8 @@ return packer.startup(function(use)
     })
 
     -- as vs-code
-    use("nvim-tree/nvim-web-devicons")
+    use("nvim-tree/nvim-web-devicons") -- nvimtree icons
+    use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" }) -- folding
     use("onsails/lspkind-nvim") -- vscode-like pictograms
     use("lukas-reineke/indent-blankline.nvim") -- indentation in the code
     -- install without yarn or npm
