@@ -10,6 +10,7 @@ alt + F1
 # Open Terminal (alacritty)
 super + Return
 	OpenApps --terminal
+	# kitty
 	
 # Open floating Terminal
 super + alt + Return

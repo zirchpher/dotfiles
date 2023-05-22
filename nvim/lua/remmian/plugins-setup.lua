@@ -40,7 +40,9 @@ return packer.startup(function(use)
     use("sheerun/vim-polyglot") -- highlight colors in many languages
 
     -- themes
-    use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+    use("bluz71/vim-nightfly-guicolors")
+    use("olimorris/onedarkpro.nvim")
+    use({ "catppuccin/nvim", as = "catppuccin" })
 
     -- essential plugins
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
