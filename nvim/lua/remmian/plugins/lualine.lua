@@ -32,5 +32,19 @@ lualine_nightfly.command = {
 lualine.setup({
     options = {
         theme = lualine_nightfly,
+        icons_enabled = true,
     },
+    lualine_x = {
+        {
+            "diagnostics",
+            sources = { "nvim_diagnostic" },
+            symbols = { error = " ", warn = " ", info = " ", hint = " " },
+        },
+        "encoding",
+        "filetype",
+    },
+    lualine_y = { "progress" },
+    lualine_z = { "location" },
+    tabline = {},
+    extensions = { "fugitive" },
 })

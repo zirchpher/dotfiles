@@ -6,6 +6,7 @@ require("remmian.core.keymaps")
 require("remmian.core.colorscheme")
 
 -- Plugins config
+-- require("remmian.plugins.neosolarized")
 require("remmian.plugins.comment")
 require("remmian.plugins.nvim-tree")
 require("remmian.plugins.lualine")

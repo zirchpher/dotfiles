@@ -41,8 +41,12 @@ return packer.startup(function(use)
 
     -- themes
     use("bluz71/vim-nightfly-guicolors")
-    use("olimorris/onedarkpro.nvim")
     use({ "catppuccin/nvim", as = "catppuccin" })
+    use("olimorris/onedarkpro.nvim")
+    use({
+        "svrana/neosolarized.nvim",
+        requires = { "tjdevries/colorbuddy.nvim" },
+    })
 
     -- essential plugins
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
@@ -58,7 +62,10 @@ return packer.startup(function(use)
     }) -- tabline plugin
 
     -- commenting with gc
-    use("numToStr/Comment.nvim")
+    -- use("numToStr/Comment.nvim")
+    use({ "numToStr/Comment.nvim", requires = {
+        "JoosepAlviste/nvim-ts-context-commentstring",
+    } })
 
     -- file explorer
     use("nvim-tree/nvim-tree.lua")
