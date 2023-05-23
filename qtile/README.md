@@ -77,12 +77,24 @@ screen=0
 systemctl --user enable redshift-gtk.service
 ```
 
+3. Notificaciones
+
+```BASH
+  sudo pacman -S libnotify notification-daemon
+  # Crea este fichero con nano o vim
+  sudo nano /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+  # Pega estas líneas
+  [D-BUS Service]
+  Name=org.freedesktop.Notifications
+  Exec=/usr/lib/notification-daemon-1.0/notification-daemon
+```
+
 # Fuentes
 
 | Nombre            | Descarga                                 |
 | ----------------- | ---------------------------------------- |
 | **Windows Fonts** | bit.ly/winfonts                          |
-| **nerfonts**      | yay -S nerd-fonts-complete-mono-glyphs   |
+| **nerdfonts**     | yay -S nerd-fonts-complete-starship      |
 | **MesloLGS NF**   | yay -S ttf-meslo-nerd-font-powerlevel10k |
 
 1. Instalación de Windows Fonts
