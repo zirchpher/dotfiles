@@ -71,6 +71,44 @@ sudo pacman -S libmtp android-file-transfer
 yay -S simple-mtpfs
 ```
 
+### ZSH Config
+
+```BASH
+### Alias
+alias ls="lsd"
+alias l="lsd -la"
+alias cat="bat"
+alias v="nvim"
+alias update="sudo pacman -Syu --noconfirm && yay -Syu"
+
+### Zinit Plugins
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+
+### spaceship config
+SPACESHIP_PROMPT_ORDER=(
+    sudo        # Sudo indicatoruser        # Username section
+    user        # Username section
+    dir         # Current directory section
+    host        # Hostname section
+    git         # Git section (git_branch + git_status)
+    hg          # Mercurial section (hg_branch  + hg_status)
+    exec_time   # Execution time
+    line_sep    # Line break
+    jobs        # Background jobs indicator
+    exit_code   # Exit code section
+    char        # Prompt character
+    venv        # virtualenv section
+)
+# SPACESHIP_<SECTION>_<OPTION>
+SPACESHIP_USER_SHOW=always
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_DIR_TRUNC_REPO=false  # when the path is long dont show the first folder
+# SPACESHIP_CHAR_PREFIX="🛸"
+### END spaceship config
+```
+
 ## WindowManager
 
 ### Qtile
