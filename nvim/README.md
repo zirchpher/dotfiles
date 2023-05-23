@@ -1,5 +1,7 @@
-Requirements:
-sudo pacman -S xclip ripgrep
+# Paquetes Necesarios
 
-control shift flechaarriba
-<c-s-up>
+```BASH
+sudo pacman -S xclip ripgrep
+```
+
+-   NodeJS
