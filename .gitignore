@@ -154,9 +154,6 @@ ehthumbs_vista.db
 # Dump file
 *.stackdump
 
-# Folder config file
-[Dd]esktop.ini
-
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
@@ -170,7 +167,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,archlinuxpackages,macos,windows,lua,vim,visualstudiocode
-
 
 # Own files
 cmus/
@@ -187,7 +183,6 @@ Microsoft Teams - Preview/
 neofetch/
 nitrogen/
 obsidian/
-*.ini
 /pulse
 QtProject.conf
 rofi/
@@ -247,3 +242,5 @@ Deezloader Remix/
 JetBrains/
 obs-studio/
 bspwm/
+mypaint/
+pavucontrol.ini

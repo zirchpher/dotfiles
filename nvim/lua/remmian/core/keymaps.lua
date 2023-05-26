@@ -38,7 +38,7 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<ESC>", ":nohl<CR>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')

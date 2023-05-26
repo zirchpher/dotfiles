@@ -30,7 +30,7 @@ lspkind.init({
         Interface = "",
         Module = "",
         Property = "ﰠ",
-        Unit = "塞",
+        Unit = "󰑭",
         Value = "",
         Enum = "",
         Keyword = "",

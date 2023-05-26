@@ -94,6 +94,7 @@ systemctl --user enable redshift-gtk.service
 | Nombre            | Descarga                                 |
 | ----------------- | ---------------------------------------- |
 | **Windows Fonts** | bit.ly/winfonts                          |
+| **Emoji Fonts**   | bit.ly/noto_emoji                        |
 | **nerdfonts**     | yay -S nerd-fonts-complete-starship      |
 | **MesloLGS NF**   | yay -S ttf-meslo-nerd-font-powerlevel10k |
 
