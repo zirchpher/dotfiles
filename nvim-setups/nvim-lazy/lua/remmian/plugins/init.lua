@@ -20,12 +20,10 @@ require("lazy").setup({
 	{ "nvim-lualine/lualine.nvim" }, -- statusline
 	{ "inkarkat/vim-ReplaceWithRegister" }, -- replace with register contents using motion (gr + motion)
 	{ "NvChad/nvim-colorizer.lua" }, -- css colors preview
-	{ "dense-analysis/ale" }, -- syntax checking and semantic errors in the same line
+	-- { "dense-analysis/ale" }, -- syntax checking and semantic errors in the same line
 	{
 		"barrett-ruth/import-cost.nvim",
 		build = "sh install.sh npm",
-		-- if on windows
-		-- build = 'pwsh install.ps1 yarn',
 		config = true,
 	},
 
@@ -69,7 +67,6 @@ require("lazy").setup({
 	-- as vs-code
 	{ "nvim-tree/nvim-web-devicons" }, -- nvimtree icons
 	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } }, -- folding
-	{ "onsails/lspkind-nvim" }, -- vscode-like pictograms
 	{ "lukas-reineke/indent-blankline.nvim" }, -- indentation in the code
 	{ "akinsho/toggleterm.nvim", version = "*", config = true }, -- terminal integration
 
@@ -103,6 +100,21 @@ require("lazy").setup({
 	-- managing & installing lsp servers, linters & formatters
 	{ "williamboman/mason.nvim" }, -- in charge of managing lsp servers, linters & formatters
 	{ "williamboman/mason-lspconfig.nvim" }, -- bridges gap b/w mason & lspconfig
+
+	-- lsp diagnostic highlight
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
+		"folke/lsp-colors.nvim",
+		opts = {
+			Error = "#db4b4b",
+			Warning = "#e0af68",
+			Information = "#0db9d7",
+			Hint = "#10B981",
+		},
+	},
 
 	-- configuring lsp servers
 	{ "neovim/nvim-lspconfig" }, -- easily configure language servers
