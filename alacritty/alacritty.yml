@@ -1,5 +1,11 @@
+# Importing colors
+import:
+  - ~/.config/alacritty/colors.yml
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-TERM: alacritty
+env:
+  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   padding:
@@ -23,97 +29,22 @@ window:
     # General application class
     general: Alacritty
 
-# Font configuration
+#  Font configuration
 font:
-  # Normal (roman) font face
   normal:
-    # family: "MesloLGS NF"
-    family: "Fira Code"
+    family: Fira Code
+    style: Retina
 
-  # The `style` can be specified to pick a specific face.
-  style: Medium
+  bold:
+    family: Fira Code
+    style: Bold
 
-  # Point size
-  size: 14.0
+  italic:
+    family: Fira Code
+    style: Italic
 
-# Normal colors
-normal:
-  black: "#1d1f21"
-  red: "#cc6666"
-  green: "#b5bd68"
-  yellow: "#F4820C"
-  blue: "#81a2be"
-  magenta: "#b294bb"
-  cyan: "#8abeb7"
-  white: "#c5c8c6"
+  bold_italic:
+    family: Fira Code
+    style: Bold Italic
 
-selection:
-  # This string contains all characters that are used as separators for
-  # "semantic words" in Alacritty.
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-
-  # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
-
-cursor:
-  # Cursor style
-  style:
-    # Cursor shape
-    #
-    # Values for `shape`:
-    #   - ▇ Block
-    #   - _ Underline
-    #   - | Beam
-    shape: Beam
-
-    # Cursor blinking state
-    #
-    # Values for `blinking`:
-    #   - Never: Prevent the cursor from ever blinking
-    #   - Off: Disable blinking by default
-    #   - On: Enable blinking by default
-    #   - Always: Force the cursor to always blink
-    blinking: Always
-
-# Directory the shell is started in. If this is unset, or `None`, the working
-# directory of the parent process will be used.
-working_directory: None
-
-# Send ESC (\x1b) before characters when alt is pressed.
-#alt_send_esc: true
-mouse:
-  double_click: { threshold: 300 }
-  triple_click: { threshold: 300 }
-
-  # If this is `true`, the cursor is temporarily hidden when typing.
-  hide_when_typing: true
-
-colors:
-  # Default colors
-  primary:
-    background: "#000000"
-    foreground: "#eaeaea"
-
-  # Normal colors
-  normal:
-    black: "#000000"
-    red: "#d54e53"
-    green: "#b9ca4a"
-    yellow: "#F58220"
-    blue: "#7aa6da"
-    magenta: "#c397d8"
-    cyan: "#70c0ba"
-    white: "#424242"
-
-  # Bright colors
-  bright:
-    black: "#666666"
-    red: "#ff3334"
-    green: "#9ec400"
-    yellow: "#F4820C"
-    blue: "#7aa6da"
-    magenta: "#b77ee0"
-    cyan: "#54ced6"
-    white: "#2a2a2a"
-theme: Tomorrow-Night-Bright
-# Regex hints
+  size: 14
