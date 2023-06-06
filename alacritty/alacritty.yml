@@ -4,7 +4,6 @@ import:
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 env:
-  TERM: alacritty
   TERM: xterm-256color
 
 window:
@@ -47,4 +46,4 @@ font:
     family: Fira Code
     style: Bold Italic
 
-  size: 14
+  size: 12

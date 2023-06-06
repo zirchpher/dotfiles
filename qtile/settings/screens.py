@@ -91,7 +91,8 @@ screens = [
                 widget.Clock(
                     background = GROUP3_COLOR,
                     foreground = FG_COLOR_DARK,
-                    format="%a %d/%b/%y %-I:%M %p",
+                    # format="%d/%b/%y %-I:%M %p",
+                    format="%-I:%M %p",
                 ),
                 
                 addHalfCirle(GROUP3_COLOR, "right"),
