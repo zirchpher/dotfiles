@@ -1,10 +1,9 @@
 from libqtile import widget
 
-BAR_COLOR = "#282a36"
+BAR_COLOR = "#00000000"
 BAR_SIZE = 25
 
 DEFAULT_FONT = "Ubuntu Mono Nerd Font"
-# FONT_SIZE = 14
 FONT_SIZE = 14
 
 # Group Variables
@@ -12,10 +11,11 @@ ACTIVE_COLOR = "#f1fa8c"
 ICONS_SIZE = 20
 FG_COLOR_LIGHT = "#FFFFFF"
 FG_COLOR_DARK = "#212121"
-BG_COLOR = "#282a36"
+BG_COLOR = "#00000000"
 INACTIVE_COLOR = "#6272a4"
 DARK_COLOR = "#44475a"
-LIGHT_COLOR = "#bd93f9"
+# LIGHT_COLOR = "#bd93f9"
+LIGHT_COLOR = "#37365e"
 URGENT_COLOR = "#ff5555"
 TEXT_COLOR1 = "#bd93f9"
 

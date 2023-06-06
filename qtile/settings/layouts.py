@@ -2,8 +2,7 @@ from libqtile import layout
 from libqtile.config import Match
 
 layouts = [
-    layout.MonadTall(margin=10, border_width=0),
-    layout.Columns(border_focus_stack=["#000000", "#000000"], border_width=0),
+    layout.Columns(border_width=0, margin=8),
     layout.Max(),
 ]
 

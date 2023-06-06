@@ -7,7 +7,8 @@ from .keys import mod, keys
 # Group using icons
 # 1. Arch | 2.Firefox | 3. Code | 4.Chrome | 5. File | 6. Teams | 7. Ghost | 8. Music     
 groups = [Group(i) for i in [
-    " ", " ", " ", " ", " ", " ", " ", "阮 "
+    "一", "二", "三", "四", "五", "六"
+    # " ", " ", " ", " ", " ", " ", " ", "阮 "
 ]]
 
 for i, group in enumerate(groups):

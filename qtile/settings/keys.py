@@ -2,7 +2,9 @@
 
 from libqtile.config import Key, Click, Drag
 from libqtile.command import lazy
+import os
 
+home = os.path.expanduser('~')
 mod = "mod4"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
@@ -53,18 +55,11 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ([mod], "period", lazy.next_screen()),
     # ([mod], "comma", lazy.prev_screen()),
 
-    # Redshift
-    # ([mod], "r", lazy.spawn("redshift -O 2400")),
-    # ([mod, "shift"], "r", lazy.spawn("redshift -x")),
-
     # ------------ App Configs ------------
 
     # Menu
     ([mod], "space", lazy.spawn("rofi -show drun")),
     #([mod], "space", lazy.spawn("~/.config/rofi/launchers/type-7/launcher.sh")),
-
-    # Emoji
-    ([mod], "period", lazy.spawn("rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c")),
 
     # Window Nav
     #([mod], "Tab", lazy.spawn("rofi -show window")),
@@ -91,9 +86,12 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Hardware Configs ------------
 
     # Volume
-    ([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%")),
-    ([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%")),
-    ([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    # ([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%")),
+    # ([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%")),
+    # ([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    ([], "XF86AudioLowerVolume", lazy.spawn(f"{home}/.config/qtile/scripts/Volume.sh --dec")),
+    ([], "XF86AudioRaiseVolume", lazy.spawn(f"{home}/.config/qtile/scripts/Volume.sh --inc")),
+    ([], "XF86AudioMute", lazy.spawn(f"{home}/.config/qtile/scripts/Volume.sh --toggle")),
 
     # Pause/Play/Nex/Previous Track
     ([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
@@ -102,10 +100,12 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([], "XF86AudioStop", lazy.spawn("playerctl stop")),
 
     # Brightness
-    ([], "F7", lazy.spawn("xbacklight -inc 1")),
-    ([], "F6", lazy.spawn("xbacklight -dec 1")),
-    # ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-    # ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+    # ([], "F7", lazy.spawn("xbacklight -inc 1")),
+    # ([], "F6", lazy.spawn("xbacklight -dec 1")),
+    ([], "F7", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh up")),
+    ([], "F6", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh down")),
+    ([], "XF86MonBrightnessUp", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh up")),
+    ([], "XF86MonBrightnessDown", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh down")),
 ]]
 
 # Drag floating layouts.
