@@ -5,6 +5,7 @@ from libqtile.command import lazy
 import os
 
 home = os.path.expanduser('~')
+qtile = f"{home}/.config/qtile"
 mod = "mod4"
 
 keys = [Key(key[0], key[1], *key[2:]) for key in [
@@ -89,9 +90,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%")),
     # ([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%")),
     # ([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
-    ([], "XF86AudioLowerVolume", lazy.spawn(f"{home}/.config/qtile/scripts/Volume.sh --dec")),
-    ([], "XF86AudioRaiseVolume", lazy.spawn(f"{home}/.config/qtile/scripts/Volume.sh --inc")),
-    ([], "XF86AudioMute", lazy.spawn(f"{home}/.config/qtile/scripts/Volume.sh --toggle")),
+    ([], "XF86AudioLowerVolume", lazy.spawn(f"{qtile}/scripts/Volume.sh --dec")),
+    ([], "XF86AudioLowerVolume", lazy.spawn(f"{qtile}/scripts/Volume.sh --dec")),
+    ([], "XF86AudioRaiseVolume", lazy.spawn(f"{qtile}/scripts/Volume.sh --inc")),
+    ([], "XF86AudioMute", lazy.spawn(f"{qtile}/scripts/Volume.sh --toggle")),
 
     # Pause/Play/Nex/Previous Track
     ([], "XF86AudioPlay", lazy.spawn("playerctl play-pause")),
@@ -100,12 +102,12 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([], "XF86AudioStop", lazy.spawn("playerctl stop")),
 
     # Brightness
-    # ([], "F7", lazy.spawn("xbacklight -inc 1")),
-    # ([], "F6", lazy.spawn("xbacklight -dec 1")),
-    ([], "F7", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh up")),
-    ([], "F6", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh down")),
-    ([], "XF86MonBrightnessUp", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh up")),
-    ([], "XF86MonBrightnessDown", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh down")),
+    ([], "F7", lazy.spawn("xbacklight -inc 1")),
+    ([], "F6", lazy.spawn("xbacklight -dec 0.4")),
+    # ([], "F7", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh up")),
+    # ([], "F6", lazy.spawn(f"{home}/.config/qtile/scripts/Brightness.sh down")),
+    ([], "XF86MonBrightnessUp", lazy.spawn("xbacklight -inc 1")),
+    ([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -dec 0.4")),
 ]]
 
 # Drag floating layouts.

@@ -11,4 +11,6 @@ cbatticon -u 10 &
 
 # Load Wallpaper
 nitrogen --restore &
+
+# Brillo de pantalla a 2
 xbacklight -set 2 &
