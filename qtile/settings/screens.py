@@ -127,7 +127,7 @@ screens = [
             background=BAR_COLOR,
             # spacer in bar side
             # Up, Right, Down, Left
-            margin = [14, 40, 0, 40],
+            margin = [14, 40, 14, 40],
             # border_width=[1, 1, 1, 1],  # Draw top and bottom borders
             # border_color=[ACTIVE_COLOR, "000000", ACTIVE_COLOR, "000000"]  # Borders are magenta
         ),
