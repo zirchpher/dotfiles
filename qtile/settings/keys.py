@@ -69,7 +69,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "Return", lazy.spawn("alacritty")),
 
     # Web Browsers
-    ([mod], "f", lazy.spawn("firefox-developer-edition")),
+    ([mod], "f", lazy.spawn("microsoft-edge-stable")),
+    # ([mod], "f", lazy.spawn("firefox-developer-edition")),
     ([mod], "c", lazy.spawn("google-chrome-stable")),
 
     # ScreenShot
