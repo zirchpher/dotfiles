@@ -2,7 +2,7 @@ from libqtile import layout
 from libqtile.config import Match
 
 layouts = [
-    layout.Columns(border_width=0, margin=14),
+    layout.Columns(border_width=0, margin=8),
     layout.Max(),
 ]
 

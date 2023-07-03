@@ -23,6 +23,9 @@ alias cat="bat"
 alias update="sudo pacman -Syu --noconfirm && yay -Syu"
 alias instalar="sudo pacman -S"
 alias desinstalar="sudo pacman -Rns"
+alias bt-on="sudo systemctl start bluetooth.service"
+alias bt-off="sudo systemctl stop bluetooth.service"
+alias bt-st="sudo systemctl status bluetooth.service"
 
 # Cleaning
 alias purga="sudo pacman -Rns $(pacman -Qtdq) ; sudo fstrim -av"
@@ -48,6 +51,7 @@ alias t="tmux"
 alias tso="tmux source ~/.config/tmux/tmux.conf"
 alias tns="tmux new -s"
 alias ta="tmux attach"
+alias tan="tmux attach -t"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -101,9 +105,3 @@ SPACESHIP_DIR_TRUNC_REPO=false  # when the path is long dont show the first fold
 
 ### NVM Config
 source /usr/share/nvm/init-nvm.sh
-
-PATH="/home/remmian/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/remmian/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/remmian/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/remmian/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/remmian/perl5"; export PERL_MM_OPT;
