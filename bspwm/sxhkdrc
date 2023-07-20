@@ -34,7 +34,7 @@ ctrl + super + alt + {p,r,q,l,k}
 
 # Apps
 super + f
-    microsoft-edge-stable
+  google-chrome-stable
 
 super + e
 	thunar
