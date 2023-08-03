@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 alias ls="lsd -a --group-directories-first"
 alias l="lsd -la --group-directories-first"
 alias cat="bat"
-alias update="sudo pacman -Syu --noconfirm && yay -Syu"
+alias update="sudo pacman -Syu --noconfirm && yay -Syu --noconfirm"
 alias instalar="sudo pacman -S"
 alias desinstalar="sudo pacman -Rns"
 alias bt-on="sudo systemctl start bluetooth.service"
