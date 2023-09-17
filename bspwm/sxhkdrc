@@ -205,9 +205,9 @@ alt + shift {Left,Down,Up,Right}
 
 # Manage brightness
 F7
-	xbacklight -inc 1
+    brightnessctl set "1%+"
 F6
-	xbacklight -dec 0.4
+    brightnessctl set "1%-"
 
 XF86MonBrightness{Up,Down}
     sh Brightness {up,down}

@@ -2,7 +2,7 @@
 # Author : rxyhn
 
 DIR="$HOME/.config/bspwm/assets"
-BRIGHTNESS_STEPS=5
+BRIGHTNESS_STEPS=1
 
 function get_brightness {
   brightnessctl i | grep -oP '\(\K[^%\)]+'
